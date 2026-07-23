@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="favGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A896" />
+      <stop offset="50%" stop-color="#02C39A" />
+      <stop offset="100%" stop-color="#F0A500" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#0E1114" stroke="#D4AF37" stroke-width="2.5"/>
+  <!-- Gold sunburst rays -->
+  <path d="M32 8 L32 14 M32 50 L32 56 M8 32 L14 32 M50 32 L56 32 M15 15 L19.2 19.2 M44.8 44.8 L49 49 M15 49 L19.2 44.8 M44.8 19.2 L49 15" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/>
+  <!-- Central gradient leaf/letter -->
+  <circle cx="32" cy="32" r="14" fill="url(#favGrad)" stroke="#111" stroke-width="1.5"/>
+  <path d="M26 34 C26 28, 38 24, 40 32 C38 34, 30 38, 26 34 Z" fill="#111" opacity="0.8"/>
+  <circle cx="32" cy="32" r="5" fill="#D4AF37"/>
+</svg>

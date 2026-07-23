@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="internewsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2c3e50" />
+      <stop offset="100%" stop-color="#1a252f" />
+    </linearGradient>
+  </defs>
+  <!-- Background Rounded Rect for high contrast on any background -->
+  <rect width="396" height="116" x="2" y="2" rx="8" fill="url(#internewsGrad)" stroke="#bdc3c7" stroke-width="2" stroke-dasharray="6,4"/>
+  
+  <!-- Icon / Globe Symbol -->
+  <g transform="translate(30, 25)">
+    <circle cx="35" cy="35" r="30" fill="none" stroke="#D4AF37" stroke-width="3" stroke-dasharray="4,3"/>
+    <circle cx="35" cy="35" r="22" fill="none" stroke="#00A896" stroke-width="2.5"/>
+    <path d="M15 35 L55 35 M35 15 L35 55 M22 22 L48 48 M22 48 L48 22" stroke="#FFFFFF" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="35" cy="35" r="6" fill="#F0A500"/>
+  </g>
+  
+  <!-- Typography / Label -->
+  <text x="115" y="48" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">INTERNEWS NETWORK</text>
+  <text x="115" y="72" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="500" fill="#00C39A" letter-spacing="1">[ LOGO PLACEHOLDER SLOT ]</text>
+  <text x="115" y="92" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#bdc3c7" font-style="italic">Supporting Partner • Pending Final Brand Asset</text>
+</svg>
