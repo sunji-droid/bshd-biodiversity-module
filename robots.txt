@@ -1,0 +1,6 @@
+# BSHD x ClimateFeatures Biodiversity Reporting Module
+# Access Restriction: Working Progress — Not for Public Distribution
+# This module is currently under final content review and is unlisted.
+
+User-agent: *
+Disallow: /

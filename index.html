@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Welcome Portal | BSHD x ClimateFeatures Journalist Training Module</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <style>
+    /* Dedicated Portal Landing Page Styling — Warm Light Theme */
+    .portal-hero {
+      background: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 50%, #FFFFFF 100%);
+      color: var(--text-main);
+      padding: 60px 20px 80px 20px;
+      border-bottom: 2px solid var(--bshd-gold);
+      position: relative;
+      overflow: hidden;
+    }
+    .portal-hero-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+    .portal-tag {
+      display: inline-block;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid var(--bshd-gold);
+      color: var(--bshd-gold);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 24px;
+    }
+    .portal-title {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--heading-color);
+      margin-bottom: 20px;
+    }
+    .portal-subtitle {
+      font-size: 1.28rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      max-width: 820px;
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
+    .portal-cta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+    .btn-portal-primary {
+      background: var(--brand-gradient);
+      color: #fff;
+      padding: 18px 36px;
+      border-radius: 10px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(0, 168, 150, 0.4);
+      transition: all 0.25s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-portal-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(0, 168, 150, 0.6);
+      color: #fff;
+    }
+    .btn-portal-secondary {
+      background: var(--canvas-card);
+      border: 1px solid var(--canvas-border);
+      color: var(--text-main);
+      padding: 16px 26px;
+      border-radius: 10px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-portal-secondary:hover {
+      background: var(--accent-light);
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+    }
+    .portal-partner-bar {
+      background: var(--canvas-card);
+      border: 1px solid var(--canvas-border);
+      border-radius: 12px;
+      padding: 24px 30px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .portal-partner-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .portal-partner-item img {
+      height: 55px;
+      width: auto;
+      background: #fff;
+      padding: 4px;
+      border-radius: 6px;
+    }
+    .portal-section-canvas {
+      max-width: 1040px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    @media (max-width: 768px) {
+      .portal-title { font-size: 2.1rem; }
+      .portal-subtitle { font-size: 1.05rem; }
+      .btn-portal-primary, .btn-portal-secondary { width: 100%; justify-content: center; }
+      .portal-hero-card { padding: 34px 24px; border-radius: 14px; }
+      .portal-hero-title { font-size: 1.7rem; }
+      .btn-hero-cta { width: 100%; justify-content: center; }
+    }
+
+    /* ---- CE4CSID-style hero card ---- */
+    .portal-hero {
+      background: var(--canvas-bg);
+      padding: 48px 20px 60px 20px;
+      border-bottom: none;
+    }
+    .portal-hero-card {
+      max-width: 900px;
+      margin: 0 auto;
+      background: linear-gradient(160deg, #0B4D45 0%, var(--cf-dark-blue) 62%, #071429 100%);
+      border-radius: 18px;
+      padding: 52px 48px;
+      box-shadow: 0 20px 45px rgba(1, 61, 87, 0.28);
+    }
+    .portal-hero-label {
+      display: block;
+      color: #8FD9CC;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 18px;
+    }
+    .portal-hero-title {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      line-height: 1.28;
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 20px 0;
+    }
+    .portal-hero-title em {
+      color: var(--cf-orange);
+      font-style: italic;
+    }
+    .portal-hero-text {
+      color: rgba(255,255,255,0.82);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      max-width: 620px;
+      margin: 0 0 32px 0;
+    }
+    .btn-hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(100deg, var(--cf-orange) 0%, var(--cf-rust) 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.02rem;
+      padding: 15px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+    .btn-hero-cta:hover {
+      transform: translateY(-2px);
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+<style>
+/* Essential inline fallback so layout and collapsible menus never break before style.css loads */
+body { font-family: system-ui, -apple-system, sans-serif; background: #FAFAFA; color: #1A1A2E; margin: 0; padding: 0; }
+.gnav-panel { display: none; }
+.gnav-menu.open .gnav-panel { display: block !important; }
+.gnav-sub-list { display: none; }
+.gnav-parent.open .gnav-sub-list { display: block !important; }
+#wp-banner { background: #FFF8E1; color: #7A5A00; padding: 8px 20px; border-bottom: 2px solid #F59E0B; display: flex; justify-content: space-between; align-items: center; }
+</style>
+</head>
+<body data-page-id="portal">
+
+<div id="wp-banner">
+  <div class="banner-content">
+    <span class="pulse-dot"></span>
+    <span>⚠️ WORKING PROGRESS — NOT FOR PUBLIC DISTRIBUTION: This module is currently under institutional review by BSHD, ClimateFeatures, and Internews Network.</span>
+  </div>
+  <button id="dismiss-wp-banner" class="banner-close" title="Dismiss warning for this session">Dismiss ×</button>
+</div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="header-brand">
+    <div class="header-logos">
+      <a href="index.html" title="Botswana Society for Human Development">
+        <img src="./assets/images/bshd-logo.jpg" alt="BSHD Logo" class="header-logo-bshd">
+      </a>
+    </div>
+    <div class="header-title-box">
+      <span class="module-tag">Journalist Training Module • Botswana</span>
+      <h1>Strengthening Reporting on Biodiversity Loss</h1>
+      <span class="header-subtitle">Environmental Degradation & Sustainable Solutions</span>
+    </div>
+  </div>
+
+  <div class="header-actions">
+    <button id="search-trigger-btn" class="btn-header btn-search">
+      🔍 <span>Search (Ctrl+K)</span>
+    </button>
+
+    <div class="gnav-menu" id="gnav-menu">
+      <button class="gnav-trigger" id="gnav-trigger" aria-haspopup="true" aria-expanded="false">
+        ☰ <span>Module Menu</span> ▾
+      </button>
+      <div class="gnav-panel">
+        <a href="index.html" class="gnav-link">🏠 Home</a>
+
+        <span class="gnav-group-label">Course Platform & Overview</span>
+        <a href="overview.html" class="gnav-link">Course Dashboard</a>
+        <a href="foreword.html" class="gnav-link">Foreword</a>
+        <a href="partners.html" class="gnav-link">Main Project Partners</a>
+        <a href="disclaimer.html" class="gnav-link">Disclaimer</a>
+        <a href="attribution.html" class="gnav-link">Attribution</a>
+        <a href="glossary.html" class="gnav-link">Glossary of Terms</a>
+
+        <hr>
+        <span class="gnav-group-label">Curriculum Units 1–5</span>
+
+        <div class="gnav-parent">
+          <div class="gnav-parent-row">
+            <a href="unit1.html" class="gnav-link">Unit 1: Global Biodiversity</a>
+            <button class="gnav-parent-toggle" aria-label="Toggle Unit 1 subsections">▾</button>
+          </div>
+          <div class="gnav-sub-list">
+            <a href="unit1.html#1-1" class="gnav-sub-link">1.1 Global Biodiversity Status</a>
+            <a href="unit1.html#1-2" class="gnav-sub-link">1.2 Agreements & Frameworks</a>
+          </div>
+        </div>
+
+        <div class="gnav-parent">
+          <div class="gnav-parent-row">
+            <a href="unit2.html" class="gnav-link">Unit 2: Botswana Issues</a>
+            <button class="gnav-parent-toggle" aria-label="Toggle Unit 2 subsections">▾</button>
+          </div>
+          <div class="gnav-sub-list">
+            <a href="unit2.html#2-1" class="gnav-sub-link">2.1 Key Biodiversity Areas & Risks</a>
+            <a href="unit2.html#2-2" class="gnav-sub-link">2.2 Domestication of Instruments</a>
+            <a href="unit2.html#2-3" class="gnav-sub-link">2.3 BUAN Ecosystem Assessment</a>
+            <a href="unit2.html#2-4" class="gnav-sub-link">2.4 Dept. Wildlife & National Parks</a>
+            <a href="unit2.html#2-5" class="gnav-sub-link">2.5 Dept. Forestry & Range Resources</a>
+          </div>
+        </div>
+
+        <a href="unit3.html" class="gnav-link">Unit 3: Climate & SD Nexus</a>
+
+        <div class="gnav-parent">
+          <div class="gnav-parent-row">
+            <a href="unit4.html" class="gnav-link">Unit 4: Reporting Practice</a>
+            <button class="gnav-parent-toggle" aria-label="Toggle Unit 4 subsections">▾</button>
+          </div>
+          <div class="gnav-sub-list">
+            <a href="unit4.html#4-1" class="gnav-sub-link">4.1 Tips for Finding Story Ideas</a>
+            <a href="unit4.html#4-2" class="gnav-sub-link">4.2 Evidence-Driven Reporting</a>
+            <a href="unit4.html#4-3" class="gnav-sub-link">4.3 Rights-Based Lens</a>
+            <a href="unit4.html#4-4" class="gnav-sub-link">4.4 Finance & Business Approach</a>
+            <a href="unit4.html#4-5" class="gnav-sub-link">4.5 Follow the Money (Investigative)</a>
+            <a href="unit4.html#4-6" class="gnav-sub-link">4.6 Solutions Journalism Framework</a>
+            <a href="unit4.html#4-7" class="gnav-sub-link">4.7 Resource-Driven Economy (Prof Kabou)</a>
+            <a href="unit4.html#4-8" class="gnav-sub-link">4.8 Journalism Ethics</a>
+            <a href="unit4.html#4-9" class="gnav-sub-link">4.9 AI in Biodiversity Reporting</a>
+          </div>
+        </div>
+
+        <a href="unit5.html" class="gnav-link">Unit 5: The Story Clinic</a>
+
+        <hr>
+        <a href="closing-reflection.html" class="gnav-link">Closing Reflection</a>
+        <a href="project-partners.html" class="gnav-link">Closing Partners & Credits</a>
+
+        <hr>
+        <div class="gnav-parent">
+          <div class="gnav-parent-row">
+            <span class="gnav-link gnav-static">⚙️ Settings</span>
+            <button class="gnav-parent-toggle" aria-label="Toggle Settings">▾</button>
+          </div>
+          <div class="gnav-sub-list">
+            <button id="theme-toggle-btn" class="gnav-sub-link gnav-sub-btn" title="Toggle Reading Canvas Theme">🌙 <span style="font-size:0.85rem">Dark Canvas</span></button>
+            <a href="print-module.html" class="gnav-sub-link">🖨️ Print Full Module</a>
+            <button id="reset-progress-btn" class="gnav-sub-link gnav-sub-btn" title="Clear locally stored progress checks">↻ Reset Progress</button>
+            <button class="gnav-sub-link gnav-sub-btn settings-trigger-btn" title="Open Module Settings & UI Control">⚙️ More Preferences…</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="reading-progress-bar" title="Module Reading Progress Tracker">
+  <div class="reading-progress-track">
+    <div id="header-progress-fill" class="reading-progress-fill"></div>
+  </div>
+  <span id="header-progress-text" class="reading-progress-text">Module Progress: 0%</span>
+</div>
+
+<!-- Portal Hero Section (No Sidebar on this Entrance Screen!) -->
+<section class="portal-hero">
+  <div class="portal-hero-card">
+    <span class="portal-hero-label">— Journalist Training Module • Botswana</span>
+    <h1 class="portal-hero-title">Stronger reporting on biodiversity loss, <em>built in from the first draft</em>, not added at the end.</h1>
+    <p class="portal-hero-text">
+      Biodiversity loss, environmental degradation, and human wildlife conflict are still under reported across Botswana's media. This module gives working journalists the knowledge, sourcing, and story development skills to cover it with depth, from the first draft.
+    </p>
+    <a href="overview.html" class="btn-hero-cta">Explore the Module →</a>
+  </div>
+</section>
+
+<!-- Main Portal Section Canvas (Clean Overview & Navigation Guide) -->
+<main class="portal-section-canvas">
+  <div style="background: var(--canvas-card); border: 1px solid var(--canvas-border); border-left: 5px solid var(--bshd-gold); border-radius: 12px; padding: 36px; margin-bottom: 40px;">
+    <h2 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--heading-color); margin-top: 0; margin-bottom: 16px;">
+      How to Navigate This Training Curriculum
+    </h2>
+    <p style="font-size: 1.08rem; color: var(--text-main); line-height: 1.8;">
+      When you enter the course (`by clicking the Enter Course Dashboard or Start Unit 1 buttons above`), you will be taken directly into our reading interface where the <strong>Module Navigation Side Bar</strong> sits cleanly on the left side of your screen.
+    </p>
+    <p style="font-size: 1.08rem; color: var(--text-main); line-height: 1.8; margin-bottom: 24px;">
+      Inside that side bar, all 13 sections and 5 training units are cleanly wrapped inside collapsible category buttons (`📍 Course Platform & Overview` and `📚 Curriculum Units 1–5`). You can open any unit right inside the side bar at any time without screen clutter!
+    </p>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 14px; border-top: 1px solid var(--canvas-border); padding-top: 24px;">
+      <a href="overview.html" style="background: var(--accent-color); color: #fff; padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none;">
+        Open Section 01: Course Dashboard →
+      </a>
+      <a href="unit1.html" style="background: var(--canvas-bg); border: 1px solid var(--canvas-border); color: var(--text-main); padding: 12px 24px; border-radius: 8px; font-weight: 600; text-decoration: none;">
+        Open Unit 1 (Section 07) →
+      </a>
+      <a href="unit2.html" style="background: var(--canvas-bg); border: 1px solid var(--canvas-border); color: var(--text-main); padding: 12px 24px; border-radius: 8px; font-weight: 600; text-decoration: none;">
+        Open Unit 2 (Section 08) →
+      </a>
+      <a href="unit3.html" style="background: var(--canvas-bg); border: 1px solid var(--canvas-border); color: var(--text-main); padding: 12px 24px; border-radius: 8px; font-weight: 600; text-decoration: none;">
+        Open Unit 3 (Section 09) →
+      </a>
+      <a href="unit4.html" style="background: var(--canvas-bg); border: 1px solid var(--canvas-border); color: var(--text-main); padding: 12px 24px; border-radius: 8px; font-weight: 600; text-decoration: none;">
+        Open Unit 4 (Section 10) →
+      </a>
+      <a href="unit5.html" style="background: var(--canvas-bg); border: 1px solid var(--canvas-border); color: var(--text-main); padding: 12px 24px; border-radius: 8px; font-weight: 600; text-decoration: none;">
+        Open Unit 5 (Section 11) →
+      </a>
+    </div>
+  </div>
+
+  <!-- Additional Institutional & Utility Links Bar -->
+  <div style="margin-top: 40px; padding-top: 30px; border-top: 2px solid var(--canvas-border); display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; text-align: center;">
+    <a href="foreword.html" style="color: var(--accent-color); font-weight: 600; text-decoration: none;">📖 02. Executive Foreword</a>
+    <a href="partners.html" style="color: var(--accent-color); font-weight: 600; text-decoration: none;">🤝 03. Main Project Partners</a>
+    <a href="disclaimer.html" style="color: var(--accent-color); font-weight: 600; text-decoration: none;">⚖️ 04. Disclaimer & Legal Terms</a>
+    <a href="attribution.html" style="color: var(--accent-color); font-weight: 600; text-decoration: none;">🏅 05. Attribution & Contributors</a>
+    <a href="glossary.html" style="color: var(--accent-color); font-weight: 600; text-decoration: none;">📚 06. Searchable Glossary</a>
+    <a href="closing-reflection.html" style="color: var(--accent-color); font-weight: 600; text-decoration: none;">✨ 12. Closing Reflection</a>
+  </div>
+</main>
+
+<!-- Search Modal Overlay -->
+<div id="search-modal-overlay" class="search-modal-overlay">
+  <div class="search-modal">
+    <div class="search-modal-header">
+      <span style="font-size: 1.3rem;">🔍</span>
+      <input type="text" id="search-input" placeholder="Search topics, terms, institutions (e.g., Okavango, DWNP, Prof Kabou)..." autocomplete="off">
+      <button id="btn-close-search" class="btn-close-modal" aria-label="Close Search">×</button>
+    </div>
+    <div id="search-results-list" class="search-results-list"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-logos">
+      <img src="./assets/images/bshd-logo.jpg" alt="BSHD Logo">
+      <img src="./assets/images/cf-logo.png" alt="ClimateFeatures Logo">
+      <img src="./assets/images/internews-logo.svg" alt="Internews Network Logo">
+    </div>
+    <div class="footer-disclaimer">
+      <strong>Strengthening Reporting on Biodiversity Loss, Environmental Degradation, and Sustainable Solutions.</strong><br>
+      A joint training module by the Botswana Society for Human Development (BSHD), ClimateFeatures, and Internews Network.<br>
+      <em>Currently under institutional review (Working Progress Version). Built for Botswana Journalists and Media Houses.</em><br><span style="display:inline-block; margin-top:8px; padding-top:8px; border-top:1px solid rgba(255,255,255,0.15); color:#D4AF37; font-weight:600;">💻 Platform Developed by: Kabo Merapelo Onamile for BSHD, ClimateFeatures & Internews Network.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="./assets/js/search-data.js"></script>
+<script src="./assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 90" width="100%" height="100%">
+  <defs>
+    <!-- Patchwork Globe Gradients -->
+    <linearGradient id="patchGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C853" />
+      <stop offset="100%" stop-color="#009624" />
+    </linearGradient>
+    <linearGradient id="patchTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#00B8D4" />
+    </linearGradient>
+    <linearGradient id="patchBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2979FF" />
+      <stop offset="100%" stop-color="#0091EA" />
+    </linearGradient>
+    <linearGradient id="patchYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD600" />
+      <stop offset="100%" stop-color="#FFAB00" />
+    </linearGradient>
+    <linearGradient id="patchOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9100" />
+      <stop offset="100%" stop-color="#FF6D00" />
+    </linearGradient>
+    <linearGradient id="patchRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF5252" />
+      <stop offset="100%" stop-color="#D50000" />
+    </linearGradient>
+  </defs>
+
+  <!-- High contrast rounded background container for clean visibility on any theme -->
+  <rect width="336" height="86" x="2" y="2" rx="10" fill="#141E28" stroke="#2D3748" stroke-width="1.5"/>
+
+  <!-- Vibrant Patchwork Globe Symbol -->
+  <g transform="translate(45, 45)">
+    <!-- Base globe circle outline -->
+    <circle cx="0" cy="0" r="28" fill="#1C2833" stroke="#34495E" stroke-width="1.5"/>
+    
+    <!-- Top-left patch (Green) -->
+    <path d="M-24,-12 C-20,-22 -12,-26 0,-28 L0,-4 C-10,-4 -18,-6 -24,-12 Z" fill="url(#patchGreen)" opacity="0.9"/>
+    <!-- Top-right patch (Teal/Blue) -->
+    <path d="M0,-28 C12,-26 20,-22 24,-12 C18,-6 10,-4 0,-4 Z" fill="url(#patchTeal)" opacity="0.95"/>
+    <!-- Middle-right patch (Blue) -->
+    <path d="M0,-2 C12,-2 22,-4 27,-8 C28,0 26,10 22,18 L0,8 Z" fill="url(#patchBlue)" opacity="0.9"/>
+    <!-- Bottom-right patch (Yellow/Orange) -->
+    <path d="M22,18 C16,24 8,27 0,28 L0,10 C10,10 16,14 22,18 Z" fill="url(#patchYellow)" opacity="0.95"/>
+    <!-- Bottom-left patch (Orange/Red) -->
+    <path d="M0,28 C-8,27 -16,24 -22,18 C-16,14 -10,10 0,10 Z" fill="url(#patchOrange)" opacity="0.9"/>
+    <!-- Middle-left patch (Red/Green cross) -->
+    <path d="M-22,18 C-26,10 -28,0 -27,-8 C-22,-4 -12,-2 0,-2 L0,8 C-10,8 -18,12 -22,18 Z" fill="url(#patchRed)" opacity="0.85"/>
+    
+    <!-- Globe grid overlay / latitude-longitude arcs -->
+    <ellipse cx="0" cy="0" rx="14" ry="28" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0.45"/>
+    <ellipse cx="0" cy="0" rx="28" ry="14" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0.45"/>
+    <line x1="-28" y1="0" x2="28" y2="0" stroke="#FFFFFF" stroke-width="1.5" opacity="0.6"/>
+    <line x1="0" y1="-28" x2="0" y2="28" stroke="#FFFFFF" stroke-width="1.5" opacity="0.6"/>
+    
+    <!-- Central node highlight -->
+    <circle cx="0" cy="0" r="4.5" fill="#FFFFFF" stroke="#141E28" stroke-width="1"/>
+  </g>
+
+  <!-- Clean Typography: Internews -->
+  <g transform="translate(88, 43)">
+    <text x="0" y="6" font-family="'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="800" fill="#FFFFFF" letter-spacing="0.5">Internews</text>
+    <!-- Tagline: Local voices. Global change. -->
+    <text x="2" y="24" font-family="'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#00E5FF" letter-spacing="1">LOCAL VOICES. GLOBAL CHANGE.</text>
+  </g>
+</svg>
